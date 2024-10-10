@@ -43,7 +43,7 @@ def create_rfm_df(df):
 
 
 # Prepare dataframe
-df = pd.read_csv("data_clean.csv")
+df = pd.read_csv("./data_clean.csv")
 
 df.rename(columns={
     'instant': 'instant',
