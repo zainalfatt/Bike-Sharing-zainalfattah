@@ -41,3 +41,7 @@ cd dashboard
 ```
 streamlit run dashboard.py
 ```
+
+Or you can or you can directly visit this website
+
+#### [**Click here to view Bike Sharing Dashboard**](https://bike-sharing-zainalfattah-6zpaawsqrnxax6etofshuf.streamlit.app/)
