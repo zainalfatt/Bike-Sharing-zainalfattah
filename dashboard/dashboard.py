@@ -43,7 +43,7 @@ def create_rfm_df(df):
 
 
 # Prepare dataframe
-df = pd.read_csv("./data_clean.csv")
+df = pd.read_csv("dashboard/data_clean.csv")
 
 df.rename(columns={
     'instant': 'instant',
@@ -67,7 +67,7 @@ max_date = df["date"].max()
 
 with st.sidebar:
     # Adding a company logo
-    st.image("./logo.png", width=200)
+    st.image("dashboard/logo.png", width=200)
 
     # Retrieve start_date & end_date from date_input
     start_date, end_date = st.date_input(
