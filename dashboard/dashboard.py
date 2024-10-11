@@ -87,7 +87,7 @@ rfm_df = create_rfm_df(main_df)
 st.header('Capital Bike Share Dashboard :bicyclist:')
 
 # Daily Users
-st.subheader('Daily Users')
+st.subheader('Season Users')
 col1, col2, col3 = st.columns(3)
 
 with col1:
