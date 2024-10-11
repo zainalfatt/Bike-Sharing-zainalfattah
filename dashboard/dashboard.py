@@ -174,6 +174,15 @@ st.subheader("Number of Users Based on Weather Conditions")
 
 # Mengelompokkan data berdasarkan kondisi cuaca dan menjumlahkan total pengguna
 byweather = main_df.groupby("weathersit")["cnt"].sum().sort_values(ascending=False).reset_index()
+
+level_labels = byweather['weathersit'].tolist()  
+level_counts = byweather['cnt'].tolist()       
+cols = st.columns(len(level_labels))
+
+for i in range(len(level_labels)):
+    with cols[i]:
+        st.metric(label=level_labels[i], value=level_counts[i])
+
 max_count = byweather['cnt'].max()
 colors = ["#72BCD4" if count >= max_count else "#D3D3D3" for count in byweather['cnt']]  # Warna default dan warna untuk tertinggi
 # Membuat figure dan plot
