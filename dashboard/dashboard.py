@@ -236,8 +236,6 @@ ax[2].set_xlabel(None)
 ax[2].set_title("By Monetary", loc="center", fontsize=18)
 ax[2].tick_params(axis='x', labelsize=15)
 
-plt.suptitle("Best Customer Based on RFM Parameters (day)", fontsize=20)
-
 st.pyplot(fig)
 
 st.subheader("Jumlah Level Volume Users")
