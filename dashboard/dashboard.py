@@ -238,7 +238,7 @@ ax[2].tick_params(axis='x', labelsize=15)
 
 st.pyplot(fig)
 
-st.subheader("Jumlah Level Volume Users")
+st.subheader("Total Kategori Jumlah Users On Time")
 total_level_pengguna = main_df.groupby("level_pengguna")['level_pengguna'].count().sort_values(ascending=False).reset_index(name='count')
 
 level_labels = total_level_pengguna['level_pengguna'].tolist()  
@@ -252,12 +252,12 @@ for i in range(len(level_labels)):
 fig, ax = plt.subplots(figsize=(10, 6))
 max_count = total_level_pengguna['count'].max()
 colors = ["#72BCD4" if c == max_count else "#D3D3D3" for c in total_level_pengguna['count']]
-sns.barplot(x='level_pengguna', y='count', data=total_level_pengguna, ax=ax, color="#D3D3D3")  # Set warna default
+sns.barplot(x='level_pengguna', y='count', data=total_level_pengguna, ax=ax, color="#D3D3D3")
 for i, count in enumerate(total_level_pengguna['count']):
     if count == max_count:
-        ax.patches[i].set_facecolor("#72BCD4")  # Mengubah warna batang tertinggi
-ax.set_ylabel('Jumlah Volume')
-ax.set_xlabel('Level Volume Pengguna/Penyewa')
+        ax.patches[i].set_facecolor("#72BCD4") 
+ax.set_ylabel('Jumlah Katgori')
+ax.set_xlabel('Kategori Jumlah Pengguna/Penyewa')
 st.pyplot(fig)
 
 st.caption(f"Copyright © 2024 All Rights Reserved Zainal Fattah (www.linkedin.com/in/zainalfattah)")
